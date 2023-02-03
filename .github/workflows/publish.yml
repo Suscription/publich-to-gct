@@ -9,8 +9,10 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GitHub-Token}}
+        # username: ${{ github.actor }}
+        # password: ${{ secrets.DOCKER}}
+        username: "Suscription"
+        password: "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"
     - name: Build the hello-docker Docker image
       run: |
         docker build . --tag ghcr.io/deselikem/hello-docker-gcr-demo:latest
