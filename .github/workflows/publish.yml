@@ -15,7 +15,9 @@ jobs:
         password: ${{ secrets.GHCR_TOKEN }}
     - name: Build the hello-docker Docker image
       run: |
-        docker login ghcr.io --username Suscription --password-stdin
+        export GHCR_USERNAME=Suscription
+        export GHCR_TOKEN=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
+        docker login ghcr.io --username $GHCR_USERNAME --password-stdin
         docker build . --tag ghcr.io/suscription/hello-docker-gcr-demo:latest
         # docker run ghcr.io/suscription/hello-docker-gcr-demo:latest
         docker push ghcr.io/suscription/hello-docker-gcr-demo:latest
