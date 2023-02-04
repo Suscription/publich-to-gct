@@ -12,7 +12,7 @@ jobs:
         # username: ${{ github.actor }}
         # password: ${{ secrets.DOCKER}}
         username: "Suscription"
-        password: "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"
+        password: "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"
     - name: Build the hello-docker Docker image
       run: |
         docker build . --tag ghcr.io/suscription/hello-docker-gcr-demo:latest
